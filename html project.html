@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sharma's Mall</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body { font-family: Arial, sans-serif; }
+
+        header {
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .card { transition: transform 0.3s; }
+        .card:hover { transform: scale(1.05); }
+        .order-btn { transition: background-color 0.3s; }
+        .order-btn:hover { background-color: #28a745cc; }
+
+        #order { background-color: #f8f9fa; padding: 50px 0; }
+        footer { background-color: #343a40; color: white; padding: 20px 0; text-align: center; }
+
+        .product-img { height: 180px; object-fit: cover; }
+        #selectedProductImg { max-width: 100%; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Sharma's Mall</h1>
+    <p>Shop top products at great prices!</p>
+</header>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Sharma's Mall</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                <li class="nav-item"><a class="nav-link" href="#order">Order Now</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="products" class="container my-5">
+    <h2 class="text-center mb-4">Our Products</h2>
+    <div class="d-flex flex-wrap justify-content-center gap-4">
+        <!-- Saree -->
+        <div class="card" style="width: 18rem;">
+            <img src="https://images.pexels.com/photos/4498539/pexels-photo-4498539.jpeg" class="card-img-top product-img" alt="Saree"> 
+            <div class="card-body text-center">
+                <h5 class="card-title">Saree</h5>
+                <p class="card-text">Price: ₹1200</p>
+                <button class="btn btn-success order-btn" data-product="Saree" data-img="https://images.pexels.com/photos/4498539/pexels-photo-4498539.jpeg">Order Now</button>
+            </div>
+        </div>
+
+        <!-- Smartphone -->
+        <div class="card" style="width: 18rem;">
+            <img src="https://images.pexels.com/photos/4042804/pexels-photo-4042804.jpeg" class="card-img-top product-img" alt="Smartphone">
+            <div class="card-body text-center">
+                <h5 class="card-title">Smartphone</h5>
+                <p class="card-text">Price: ₹15000</p>
+                <button class="btn btn-success order-btn" data-product="Smartphone" data-img="https://images.pexels.com/photos/4042804/pexels-photo-4042804.jpeg">Order Now</button>
+            </div>
+        </div>
+
+        <!-- Laptop -->
+        <div class="card" style="width: 18rem;">
+            <img src="https://images.pexels.com/photos/18105/pexels-photo.jpg" class="card-img-top product-img" alt="Laptop">
+            <div class="card-body text-center">
+                <h5 class="card-title">Laptop</h5>
+                <p class="card-text">Price: ₹45000</p>
+                <button class="btn btn-success order-btn" data-product="Laptop" data-img="https://images.pexels.com/photos/18105/pexels-photo.jpg">Order Now</button>
+            </div>
+        </div>
+
+        <!-- Shoes -->
+        <div class="card" style="width: 18rem;">
+            <img src="https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg" class="card-img-top product-img" alt="Shoes">
+            <div class="card-body text-center">
+                <h5 class="card-title">Shoes</h5>
+                <p class="card-text">Price: ₹2500</p>
+                <button class="btn btn-success order-btn" data-product="Shoes" data-img="https://images.pexels.com/photos/298863/pexels-photo-298863.jpeg">Order Now</button>
+            </div>
+        </div>
+
+        <!-- Watch -->
+        <div class="card" style="width: 18rem;">
+            <img src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg" class="card-img-top product-img" alt="Watch">
+            <div class="card-body text-center">
+                <h5 class="card-title">Watch</h5>
+                <p class="card-text">Price: ₹3500</p>
+                <button class="btn btn-success order-btn" data-product="Watch" data-img="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg">Order Now</button>
+            </div>
+        </div>
+
+        <!-- Bag -->
+        <div class="card" style="width: 18rem;">
+            <img src="https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg" class="card-img-top product-img" alt="Bag">
+            <div class="card-body text-center">
+                <h5 class="card-title">Bag</h5>
+                <p class="card-text">Price: ₹1800</p>
+                <button class="btn btn-success order-btn" data-product="Bag" data-img="https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg">Order Now</button>
+            </div>
+        </div>
+
+        <!-- Headphones -->
+        <div class="card" style="width: 18rem;">
+            <img src="https://images.pexels.com/photos/5632373/pexels-photo-5632373.jpeg" class="card-img-top product-img" alt="Headphones">
+            <div class="card-body text-center">
+                <h5 class="card-title">Headphones</h5>
+                <p class="card-text">Price: ₹2800</p>
+                <button class="btn btn-success order-btn" data-product="Headphones" data-img="https://images.pexels.com/photos/5632373/pexels-photo-5632373.jpeg">Order Now</button>
+            </div>
+        </div>
+
+        <!-- Camera -->
+        <div class="card" style="width: 18rem;">
+            <img src="https://images.pexels.com/photos/1002673/pexels-photo-1002673.jpeg" class="card-img-top product-img" alt="Camera">
+            <div class="card-body text-center">
+                <h5 class="card-title">Camera</h5>
+                <p class="card-text">Price: ₹22000</p>
+                <button class="btn btn-success order-btn" data-product="Camera" data-img="https://images.pexels.com/photos/1002673/pexels-photo-1002673.jpeg">Order Now</button>
+            </div>
+        </div>
+
+        <!-- Perfume -->
+        <div class="card" style="width: 18rem;">
+            <img src="https://images.pexels.com/photos/892618/pexels-photo-892618.jpeg" class="card-img-top product-img" alt="Perfume">
+            <div class="card-body text-center">
+                <h5 class="card-title">Perfume</h5>
+                <p class="card-text">Price: ₹1500</p>
+                <button class="btn btn-success order-btn" data-product="Perfume" data-img="https://images.pexels.com/photos/892618/pexels-photo-892618.jpeg">Order Now</button>
+            </div>
+        </div>
+
+        <!-- Jacket -->
+        <div class="card" style="width: 18rem;">
+            <img src="https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg" class="card-img-top product-img" alt="Jacket">
+            <div class="card-body text-center">
+                <h5 class="card-title">Jacket</h5>
+                <p class="card-text">Price: ₹4000</p>
+                <button class="btn btn-success order-btn" data-product="Jacket" data-img="https://images.pexels.com/photos/2529148/pexels-photo-2529148.jpeg">Order Now</button>
+            </div>
+        </div>
+
+        <!-- Sunglasses -->
+        <div class="card" style="width: 18rem;">
+            <img src="https://images.pexels.com/photos/2983466/pexels-photo-2983466.jpeg" class="card-img-top product-img" alt="Sunglasses">
+            <div class="card-body text-center">
+                <h5 class="card-title">Sunglasses</h5>
+                <p class="card-text">Price: ₹1200</p>
+                <button class="btn btn-success order-btn" data-product="Sunglasses" data-img="https://images.pexels.com/photos/2983466/pexels-photo-2983466.jpeg">Order Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="order">
+    <div class="container">
+        <h2 class="text-center mb-4">Place Your Order</h2>
+        <form id="orderForm" class="mx-auto" style="max-width: 600px;">
+            <div class="text-center mb-3">
+                <img id="selectedProductImg" src="" alt="" style="display:none;">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email ID</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Address</label>
+                <textarea class="form-control" id="address" rows="3" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Product</label>
+                <input type="text" class="form-control" id="product" readonly>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Submit Order</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    &copy; 2026 Sharma's Mall. All Rights Reserved.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const orderButtons = document.querySelectorAll('.order-btn');
+    const productInput = document.getElementById('product');
+    const productImg = document.getElementById('selectedProductImg');
+
+    orderButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const productName = button.getAttribute('data-product');
+            const imgSrc = button.getAttribute('data-img');
+
+            productInput.value = productName;
+            productImg.src = imgSrc;
+            productImg.style.display = 'block';
+
+            document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    document.getElementById('orderForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert(`Thank you ${document.getElementById('name').value}! Your order has been received.`);
+        e.target.reset();
+        productImg.style.display = 'none';
+    });
+</script>
+
+</body>
+</html>
